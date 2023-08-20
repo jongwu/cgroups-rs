@@ -193,7 +193,7 @@ mod sealed {
             } else {
                 match File::open(&path) {
                     Err(e) => Err(Error::with_cause(
-                        ErrorKind::ReadFailed(path.display().to_string()),
+                        ErrorKind::OpenFailed(path.display().to_string()),
                         e,
                     )),
                     Ok(file) => Ok(file),

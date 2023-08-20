@@ -24,6 +24,10 @@ pub enum ErrorKind {
     #[error("unable to read a control group file {0}")]
     ReadFailed(String),
 
+    /// An error occured while trying to open a control group file
+    #[error("unable to open a control group file {0}")]
+    OpenFailed(String),
+
     /// An error occured while trying to remove a control group.
     #[error("unable to remove a control group")]
     RemoveFailed,
